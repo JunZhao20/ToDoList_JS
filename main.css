@@ -63,3 +63,39 @@ button {
   line-height: 0px;
   text-align: center;
 }
+
+ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  /* Doesn't allow hightlight */
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(images/unchecked.png);
+  /* This specifies the background image size.
+     Cover is used to resize the image to fit in the container. */
+  background-size: cover;
+  /* Sets initial pos of the image */
+  background-position: center;
+  left: 8px;
+  top: 8px;
+}
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  content: "";
+  position: absolute;
+  background-image: url(images/checked.png);
+}
