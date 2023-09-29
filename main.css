@@ -68,10 +68,13 @@ ul li {
   list-style: none;
   font-size: 17px;
   padding: 12px 8px 12px 50px;
+  margin-bottom: 12px;
   /* Doesn't allow hightlight */
   user-select: none;
   cursor: pointer;
   position: relative;
+  background-color: #ededed;
+  border-radius: 7px;
 }
 
 ul li::before {
@@ -98,4 +101,21 @@ ul li.checked::before {
   content: "";
   position: absolute;
   background-image: url(images/checked.png);
+}
+
+ul li img {
+  height: 28px;
+  width: 28px;
+  background-size: cover;
+  position: absolute;
+  background-position: center;
+  left: 28%;
+  top: 4px;
+}
+
+.binB {
+  position: absolute;
+  background-position: center;
+  left: 87%;
+  top: 4px;
 }
